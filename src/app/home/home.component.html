@@ -1,12 +1,33 @@
-<div class="header">
-  <div>Menú<span>Principal</span></div><br>
-  <button routerLink="/login">Logout</button>
-</div>
-<br>
-<div class="home">
-  <button>Ahorcado</button>
-  <button>Mayor o menor</button>
-  <button>Preguntados</button>
-  <button>Juego propio</button>
-  <button routerLink="/quien-soy">¿Quien soy?</button>
-</div>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">Menú principal</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="./home">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Juegos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/home/ahorcado">Ahorcado</a></li>
+            <li><a class="dropdown-item" routerLink="/home/mayor-o-menor">Mayor o menor</a></li>
+            <li><a class="dropdown-item" routerLink="/home/preguntados">Preguntados</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" routerLink="/home/unnamed">Nombre de juego</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/home/quien-soy'>Quien soy</a>
+        </li>
+      </ul>
+    </div>
+    <button class="btn btn-sm btn-outline-secondary" type="button" routerLink="/">Desloguear</button>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

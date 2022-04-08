@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+
+.texto-bicolor{
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(45% - 255px);
+	z-index: 2;
+}
+
+.texto-bicolor div{
+	float: left;
+	color: rgb(0, 0, 0);
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200;
+}
+
+.texto-bicolor div span{
+	color: #ff3737 !important;
+}

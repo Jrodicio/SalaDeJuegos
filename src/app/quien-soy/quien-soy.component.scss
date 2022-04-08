@@ -1,80 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
-
-.header{
-	position: absolute;
-	top: calc(50% - 35px);
-	left: calc(45% - 255px);
-	z-index: 2;
-}
-div div{
-  color: #fff;
-	font-family: 'Exo', sans-serif;
-  font-weight: 200;
-}
-
-.header div{
-	float: left;
-	font-size: 35px;
-}
-
-div div span{
-	color: #ff3737 !important;
-}
-
-button{
-	width: 260px;
-	height: 35px;
-	background: #fff;
-	border: 1px solid #fff;
-	cursor: pointer;
-	border-radius: 2px;
-	color: #0c0b09;
-	font-family: 'Exo', sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	padding: 6px;
-	margin-top: 10px;
-  margin-left: -60px;
-}
-
-button:hover{
-	opacity: 0.8;
-}
-
-button:active{
-	opacity: 0.6;
-}
-
-button:focus{
-	outline: none;
-}
-
-.presentacion{
-	position: absolute;
-	top: calc(50% - 75px);
-	left: calc(50% - 50px);
-	height: 150px;
-	width: 350px;
-	padding: 10px;
-	z-index: 2;
+.texto-bicolor{
+	top: 25%;
+	left: 50%;
 }
 
 .img{
-  float:left;
-  width: 110px;
-  height: 112px;
+  margin-top: 10%;
+  margin-left: 10%;
+  width: 300px;
+  height: 300px;
   border: 5px solid rgba(0,0,0,1.2);
   border-radius: 40px 0px 40px 0px;
-  background-image: url(../../images/sobremi.jpg);
+  background-image: url(../../images/sobremi.png);
   background-size: contain;
-}
-
-
-.presentacion div{
-  float: right;
-  margin-right: 50px;
-  font-size: 20px;
 }
 
 .juego{
