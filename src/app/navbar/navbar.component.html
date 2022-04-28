@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand">Sala de juegos</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="./home">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Juegos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/home/ahorcado">Ahorcado</a></li>
+            <li><a class="dropdown-item" routerLink="/home/mayor-o-menor">Mayor o menor</a></li>
+            <li><a class="dropdown-item" routerLink="/home/preguntados">Preguntados</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" routerLink="/home/unnamed">Nombre de juego</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/home/quien-soy'>Quien soy</a>
+        </li>
+      </ul>
+    </div>
+    <button class="btn btn-sm btn-outline-danger logout" type="button" (click)="desloguear()">Desloguear</button>
+  </div>
+</nav>
+  <router-outlet></router-outlet>

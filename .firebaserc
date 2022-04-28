@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "sala-de-juegos-rodicio"
+  },
+  "targets": {
+    "sala-de-juegos-rodicio": {
+      "hosting": {
+        "Sala-de-juegos": [
+          "sala-de-juegos-rodicio"
+        ]
+      }
+    }
   }
 }

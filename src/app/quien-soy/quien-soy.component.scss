@@ -1,25 +1,25 @@
-.texto-bicolor{
-	top: 25%;
-	left: 50%;
+.img-fluid{
+  position: absolute;
+  left:8%;
+  max-height: 300px;
+  border: 10px solid;
+  border-radius: 20px;
+  border-color:  rgba(0,0,0,0.4);
 }
 
-.img{
-  margin-top: 10%;
-  margin-left: 10%;
-  width: 300px;
-  height: 300px;
-  border: 5px solid rgba(0,0,0,1.2);
-  border-radius: 40px 0px 40px 0px;
-  background-image: url(../../images/sobremi.png);
-  background-size: contain;
+.container{
+  position: absolute;
+  top:200px;
 }
 
-.juego{
-	position: absolute;
-	top: calc(50% + 80px);
-	left: calc(30%);
-	height: 150px;
-	width: 350px;
-	padding: 10px;
-	z-index: 2;
+.userData{
+  position: absolute;
+  top: 0px;
+  left: 40%;
+  background-color: rgba(0,0,0,0.4);
+  border: 10px solid;
+  border-radius: 20px;
+  border-color:  rgba(0,0,0,0.1);
+  max-height: 300px;
+  max-width: 1000px;
 }

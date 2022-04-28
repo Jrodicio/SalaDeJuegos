@@ -1,11 +1,11 @@
 <div class="texto-bicolor">
 
   <div>
-    Bienvenido <span>a la</span><br>
-    Sala de<span> Juegos</span></div>
+    Registrá <span>un</span><br>
+    nuevo<span> usuario</span></div>
 </div>
 <br>
-<form [formGroup]="loginForm" (ngSubmit)="signIn(loginForm.value)">
+<form [formGroup]="registerForm" (ngSubmit)="signUp(registerForm.value)">
   <div class="login">
     <input type="text" placeholder="Correo" formControlName="correo">
     <small class="bg-danger text-light px-1 py-2 rounded"
@@ -25,15 +25,13 @@
       </ng-container>
     </small>
     <br>
-    <button class="btn btn-sm btn-outline-success" type="submit">Login</button>
+    <button class="btn btn-sm btn-outline-success" type="submit">Registrarme</button>
     <br>
-    <button class="btn btn-sm btn-outline-danger" routerLink="/register">Soy nuevo</button><br>
-    <div class="text-light" [hidden]="loginInvalido" [innerText]="errorLogin"></div>
-    <button type="button" class="btn btn-secondary btn-sm" (click)="cargarCredencialesAdmin()">Acceso rápido: administrador</button>
-    <br>
+    <button class="btn btn-sm btn-outline-danger" routerLink="/login">Ya tengo una cuenta</button><br>
     <button class="btn btn-success"  [hidden]="ocultarSpinner">
       <span class="spinner-border spinner-border-sm"></span>
     </button>
-    <br>
+    <div class="text-light" [hidden]="registerInvalido" [innerText]="errorRegister"></div>
   </div>
+
 </form>
