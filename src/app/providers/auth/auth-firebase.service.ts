@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/compat/database';
-
+import { Fecha } from 'src/app/clases/fecha';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class AuthService {
     public angularFireAuth: AngularFireAuth,
     private db: AngularFireDatabase
   ) {
-    this.loginsRef = db.list('/loginUsuarios');
+    this.loginsRef = this.db.list('/loginUsuarios');
     this.angularFireAuth.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
@@ -65,9 +65,9 @@ export class AuthService {
   }
 
   addLoginDB(email: string){
-    let ts = new Date();
-    console.log({fecha: ts.toString(), usuario:email})
-    this.loginsRef.push({fecha: ts.toString(), usuario:email});
+    let ts = new Fecha();
+    console.log({fecha: ts.date, usuario:email})
+    this.loginsRef.push({fecha: ts.date, usuario:email});
   }
 }
 

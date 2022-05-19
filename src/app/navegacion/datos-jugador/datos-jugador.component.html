@@ -1,0 +1,17 @@
+<div class="container">
+
+  <div class="d-flex p-2 bd-highlight align-items-center" *ngIf="authService.userData as user">
+
+    <div class="p-2 bd-highlight">
+      <img class="img-fluid" src="{{(user.photoURL) ? user.photoURL : 'https://img.freepik.com/foto-gratis/impresionado-joven-repartidor-uniforme-azul-gorra-pie-vista-perfil-sosteniendo-paquetes-pizza-haciendo-gesto-golpe-mirando-al-frente-aislado-pared-rosa_141793-110333.jpg'}}" alt="{{user.displayName}}">
+    </div>
+
+    <div class="texto-bicolor userData p-2 bd-highlight">
+      <p>Hola, <span>{{(user.displayName) ? user.displayName : 'Sin nombre'}}</span></p>
+      <p>UID: <span>{{user.uid}}</span></p>
+      <p>Correo: <span>{{user.email}}</span></p>
+      <p>Correo verificado: <span>{{user.emailVerified}}</span></p>
+    </div>
+
+  </div>
+</div>

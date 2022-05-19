@@ -1,0 +1,37 @@
+<div class="texto-bicolor">
+
+  <div>
+    Registrá <span>un</span><br>
+    nuevo<span> usuario</span></div>
+</div>
+<br>
+<form [formGroup]="registerForm" (ngSubmit)="signUp(registerForm.value)">
+  <div class="login">
+    <input type="text" placeholder="Correo" formControlName="correo">
+    <small class="bg-danger text-light px-1 py-2 rounded"
+        *ngIf="(fm.correo.dirty || fm.correo.touched) && fm.correo.errors">
+      <ng-container [ngSwitch]="fm.correo.value">
+        <ng-container *ngSwitchCase="''">El email es requerido</ng-container>
+        <ng-container *ngSwitchDefault="">El email es inválido</ng-container>
+      </ng-container>
+    </small>
+    <br>
+    <input type="password" placeholder="Contraseña" formControlName="contrasena">
+    <small class="bg-danger text-light px-1 py-2 rounded"
+        *ngIf="(fm.contrasena.dirty || fm.contrasena.touched) && fm.contrasena.errors">
+      <ng-container [ngSwitch]="fm.contrasena.value">
+        <ng-container *ngSwitchCase="''">La contraseña es requerida</ng-container>
+        <ng-container *ngSwitchDefault="">La contraseña debe tener al menos 6 caracteres</ng-container>
+      </ng-container>
+    </small>
+    <br>
+    <button class="btn btn-sm btn-outline-success" type="submit">Registrarme</button>
+    <br>
+    <button class="btn btn-sm btn-outline-danger" (click)="routeLogin()">Ya tengo una cuenta</button><br>
+    <button class="btn btn-success"  [hidden]="ocultarSpinner">
+      <span class="spinner-border spinner-border-sm"></span>
+    </button>
+    <div class="text-light" [hidden]="registerInvalido" [innerText]="errorRegister"></div>
+  </div>
+
+</form>

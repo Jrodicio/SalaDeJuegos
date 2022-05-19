@@ -1,0 +1,38 @@
+<button [ngClass]="chatAbierto? 'btn btn-sm btn-light btn-chat slide-out-left' : 'btn btn-sm btn-light btn-chat slide-in-left'"  type="button" (click)="abrirChat()">
+  <img class="chat-icon" src="../../../assets/img/chat.png">
+</button>
+
+<div [ngClass]="chatAbierto? 'container chat-window slide-in-left' : 'container chat-window slide-out-left'" id="chat-window">
+
+  <div class="row title">
+    <div class="col-sm-11">
+      <span>Chat global</span>
+    </div>
+    <div class="col-sm-1">
+      <img class="close-chat" src="../../../assets/img/close.png" (click)="cerrarChat()">
+    </div>
+  </div>
+
+  <div class="row cuerpo">
+    <div *ngFor="let msj of mensajes">
+      <div class="un-mensaje">
+        <div class="row">
+          <div class="col-sm-8 sender">{{msj.correo}}:</div> <div class="col-sm-4 time">{{msj.ts}}</div>
+
+          <div class="col-sm-12 contenido">{{msj.contenido}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mensaje">
+    <div class="col-sm-11">
+      <input type="text" maxlength="60" (keydown.enter)="enviarMensaje(mensaje.value) ; mensaje.value = ''" #mensaje>
+    </div>
+    <div class="col-sm-1">
+      <button class="btn btn-light btn-send" (click)="enviarMensaje(mensaje.value) ; mensaje.value = ''; pruebaMensajes()">
+        <img class="img-send" src="../../../assets/img/send.png">
+      </button>
+    </div>
+  </div>
+</div>

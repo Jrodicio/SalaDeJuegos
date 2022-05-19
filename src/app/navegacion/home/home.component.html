@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-red navbar-dark">
+  <div class="wrapper"></div>
+
+  <div class="container-fluid all-show">
+    <img src="../../../assets/img/favicon.ico" style="height: 40px;">
+    <a class="navbar-brand">Sala de juegos</a>
+    <div class="navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" (click)="this.router.navigateByUrl('home')">Home</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="this.router.navigateByUrl('home/juegos')">Juegos</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="this.router.navigateByUrl('home/quien-soy')">Quien soy</a></li>
+      </ul>
+    </div>
+    <div class="titulo-page">
+      {{tituloPage}}
+    </div>
+  </div>
+
+
+  <div class="d-flex flex-column sim justify-content-end">
+    <span>Bienvenido</span>
+    <small>{{userMail}}</small>
+  </div>
+  <button class="btn btn-sm btn-outline-danger logout" type="button" (click)="desloguear()">Logout</button>
+</nav>
+
+<router-outlet (activate)='onTituloPage($event)'></router-outlet>
+<app-chat class="app-chat" [correoUsuario]="userMail"></app-chat>

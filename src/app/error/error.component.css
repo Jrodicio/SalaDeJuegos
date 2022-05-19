@@ -1,0 +1,5 @@
+.texto-bicolor{
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(45% - 255px);
+}

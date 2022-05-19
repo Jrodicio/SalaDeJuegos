@@ -1,0 +1,24 @@
+.img-fluid{
+  width: 400px;
+  border: 10px solid;
+  border-radius: 20px;
+  border-color:  rgba(0,0,0,0.4);
+}
+
+.userData{
+  background-color: rgba(0,0,0,0.4);
+  border: 10px solid;
+  border-radius: 20px;
+  border-color:  rgba(0,0,0,0.1);
+}
+
+.texto-bicolor{
+  color: rgb(255, 255, 255) !important;
+	font-family: 'Allerta Stencil', sans-serif;
+	font-size: 30px;
+	font-weight: 200;
+
+  span{
+    color: #a959be !important;
+  }
+}
